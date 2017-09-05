@@ -792,7 +792,7 @@
                                                         <rect key="frame" x="10" y="330" width="721" height="18"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="create mode 100644 devi/Assets.xcassets/NavBarIcons/user.imageset/bgintro.png" id="fcb-Q9-6pl">
-                                                            <font key="font" size="12" name="V5Xtender"/>
+                                                            <font key="font" size="10" name="PressStart2P"/>
                                                             <color key="textColor" white="1" alpha="0.46246254280821919" colorSpace="calibratedWhite"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -801,7 +801,7 @@
                                                         <rect key="frame" x="10" y="310" width="721" height="18"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="create mode 100644 devi/Assets.xcassets/chatView.xib" id="ccU-43-Yi7">
-                                                            <font key="font" size="12" name="V5Xtender"/>
+                                                            <font key="font" size="10" name="PressStart2P"/>
                                                             <color key="textColor" white="1" alpha="0.46246254280821919" colorSpace="calibratedWhite"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -810,7 +810,7 @@
                                                         <rect key="frame" x="10" y="290" width="721" height="18"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="string output = 'Matrix'" id="wy3-wV-ynn">
-                                                            <font key="font" size="12" name="V5Xtender"/>
+                                                            <font key="font" size="10" name="PressStart2P"/>
                                                             <color key="textColor" white="1" alpha="0.46246254280821919" colorSpace="calibratedWhite"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -819,7 +819,7 @@
                                                         <rect key="frame" x="10" y="270" width="721" height="18"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="thoughts exploding : thousand pieces" id="p7S-J0-WCf">
-                                                            <font key="font" size="12" name="V5Xtender"/>
+                                                            <font key="font" size="10" name="PressStart2P"/>
                                                             <color key="textColor" white="1" alpha="0.46246254280821919" colorSpace="calibratedWhite"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -828,7 +828,7 @@
                                                         <rect key="frame" x="10" y="349" width="721" height="18"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="24 files changed, 282 insertions(+)" id="EI7-ew-yZH">
-                                                            <font key="font" size="12" name="V5Xtender"/>
+                                                            <font key="font" size="9" name="PressStart2P"/>
                                                             <color key="textColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
