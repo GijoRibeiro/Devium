@@ -20,6 +20,9 @@
 		24EC6B281F5F6C0100BB8C18 /* PressStart2P.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24EC6B261F5F6BC400BB8C18 /* PressStart2P.ttf */; };
 		24EC6B2B1F5F6C3A00BB8C18 /* 8-BIT WONDER.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 24EC6B2A1F5F6C3100BB8C18 /* 8-BIT WONDER.TTF */; };
 		24EC6B2C1F5F6C3A00BB8C18 /* V5Xtende.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24EC6B291F5F6C1F00BB8C18 /* V5Xtende.ttf */; };
+		24EC6B2F1F5F76D800BB8C18 /* HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EC6B2E1F5F76D800BB8C18 /* HexConverter.swift */; };
+		24EC6B311F5F76E400BB8C18 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EC6B301F5F76E400BB8C18 /* Colors.swift */; };
+		24EC6B371F5F7B4000BB8C18 /* passoff.gif in Resources */ = {isa = PBXBuildFile; fileRef = 24EC6B361F5F7B4000BB8C18 /* passoff.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		24EC6B261F5F6BC400BB8C18 /* PressStart2P.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PressStart2P.ttf; sourceTree = "<group>"; };
 		24EC6B291F5F6C1F00BB8C18 /* V5Xtende.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = V5Xtende.ttf; sourceTree = "<group>"; };
 		24EC6B2A1F5F6C3100BB8C18 /* 8-BIT WONDER.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "8-BIT WONDER.TTF"; sourceTree = "<group>"; };
+		24EC6B2E1F5F76D800BB8C18 /* HexConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexConverter.swift; sourceTree = "<group>"; };
+		24EC6B301F5F76E400BB8C18 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		24EC6B361F5F7B4000BB8C18 /* passoff.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = passoff.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +165,7 @@
 		24EC6B241F5F6B2500BB8C18 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				24EC6B361F5F7B4000BB8C18 /* passoff.gif */,
 				249DC6601F5EEE8600986B98 /* finalBG.gif */,
 			);
 			name = Login;
@@ -176,11 +183,21 @@
 		24EC6B271F5F6BCA00BB8C18 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				24EC6B2D1F5F76CE00BB8C18 /* Fonts */,
+				24EC6B2E1F5F76D800BB8C18 /* HexConverter.swift */,
+				24EC6B301F5F76E400BB8C18 /* Colors.swift */,
+			);
+			name = Theme;
+			sourceTree = "<group>";
+		};
+		24EC6B2D1F5F76CE00BB8C18 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
 				24EC6B2A1F5F6C3100BB8C18 /* 8-BIT WONDER.TTF */,
 				24EC6B291F5F6C1F00BB8C18 /* V5Xtende.ttf */,
 				24EC6B261F5F6BC400BB8C18 /* PressStart2P.ttf */,
 			);
-			name = Theme;
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +314,7 @@
 				24EC6B2C1F5F6C3A00BB8C18 /* V5Xtende.ttf in Resources */,
 				24EC6B281F5F6C0100BB8C18 /* PressStart2P.ttf in Resources */,
 				249DC6611F5EEE8600986B98 /* finalBG.gif in Resources */,
+				24EC6B371F5F7B4000BB8C18 /* passoff.gif in Resources */,
 				249DC62D1F5EE12400986B98 /* Assets.xcassets in Resources */,
 				249DC6301F5EE12400986B98 /* Main.storyboard in Resources */,
 			);
@@ -326,7 +344,9 @@
 				249DC6631F5EFF8300986B98 /* WindowSub.swift in Sources */,
 				249DC6581F5EE44900986B98 /* WindowViewController.swift in Sources */,
 				249DC62B1F5EE12400986B98 /* ViewController.swift in Sources */,
+				24EC6B311F5F76E400BB8C18 /* Colors.swift in Sources */,
 				24E881311F5F163000A7290B /* ChatViewController.swift in Sources */,
+				24EC6B2F1F5F76D800BB8C18 /* HexConverter.swift in Sources */,
 				249DC6291F5EE12400986B98 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
