@@ -12,20 +12,26 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var loginAction: NSButton!
     @IBOutlet weak var backgroundCity: NSImageView!
+    @IBOutlet weak var backgroundGradient: NSImageView!
+    @IBOutlet var backgroundCodes: NSTextView!
     
     @IBOutlet weak var usernameField: NSTextField!
     private var myWindow: NSWindow!
     @IBOutlet weak var codeSide: NSBox!
     
+    var hackingGoingOn = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        backgroundCity.alphaValue = 0.4
+        backgroundGradient.alphaValue = 0.3
+        backgroundCity.alphaValue = 0.8
         backgroundCity.canDrawSubviewsIntoLayer = true
         backgroundCity.animates = true
         backgroundCity.layer?.contentsGravity = kCAGravityResizeAspectFill
         backgroundCity.image = NSImage(named: "finalBG")
-        
+    
+        fillHackingCodes()
         
         let pstyle = NSMutableParagraphStyle()
         pstyle.alignment = .center
@@ -108,7 +114,7 @@ class ViewController: NSViewController {
         labelPassOff.maximumNumberOfLines = 3
         self.view.addSubview(labelPassOff)
         
-        labelPassOff.animate(newText: "<wrong *| Password:Init*> \nThat was close. \nThese guys could be hackers...", characterDelay: 0.08)
+        labelPassOff.setLabelWithTypeAnimation(typedText: "<wrong *| Password:Init*RegretForMissingIt> \nThat was close. \nThese guys could be hackers...", characterInterval: 0.09)
         
         let labelPassOffInitializing = NSTextField()
         labelPassOffInitializing.frame = CGRect(x: codeSide.frame.origin.x + 30, y: 0, width: 600, height: 300)
@@ -128,12 +134,14 @@ class ViewController: NSViewController {
         
         let when = DispatchTime.now() + 7
         DispatchQueue.main.asyncAfter(deadline: when) {
-            labelPassOffInitializing.animate(newText: "Initializing assassination function...", characterDelay: 0.15)
+            labelPassOffInitializing.setLabelWithTypeAnimation(typedText: "Initializing assassination function...", characterInterval: 0.0800)
+            
         }
         
         let whenAnswer = DispatchTime.now() + 12
         DispatchQueue.main.asyncAfter(deadline: whenAnswer) {
-            labelPassOff.animate(newText: "Oh... <FCK>!", characterDelay: 0.20)
+            labelPassOff.stringValue = ""
+            labelPassOff.setLabelWithTypeAnimation(typedText: "Oh... <FCK>!", characterInterval: 0.20)
         }
         
         let labelPassOffInitied = NSTextField()
@@ -152,28 +160,33 @@ class ViewController: NSViewController {
         labelPassOffInitied.maximumNumberOfLines = 3
         self.view.addSubview(labelPassOffInitied)
         
-        let whenInit = DispatchTime.now() + 13
+        let whenInit = DispatchTime.now() + 15
         DispatchQueue.main.asyncAfter(deadline: whenInit) {
-            labelPassOffInitied.animate(newText: "var : atomic.front.wave = gijotrix \nlife.addsubview(don't be afraid) \nGenerate Stream.IO*InMid3D\n-> String; [Danone is Not Milk] \nJust recov*r {u} paxxs0rd \ndude -> man();", characterDelay: 0.09)
+            labelPassOffInitied.setLabelWithTypeAnimation(typedText: "var : atomic.front.wave = gijotrix \nlife.addsubview(don't be afraid) \nGenerate Stream.IO*InMid3D\n-> String; [Danone is Not Milk] \nJust recov*r {u} paxxs0rd \ndude -> man();", characterInterval: 0.0400)
         }
         
-        let delayToGoBack = DispatchTime.now() + 35
+        let delayToGoBack = DispatchTime.now() + 30
         DispatchQueue.main.asyncAfter(deadline: delayToGoBack) {
-            wrongPassWarningView.removeFromSuperview()
-            wrongPassWarningImage.removeFromSuperview()
-            labelPassOff.removeFromSuperview()
-            labelPassOffInitializing.removeFromSuperview()
-            labelPassOffInitied.removeFromSuperview()
+            
+            NSAnimationContext.runAnimationGroup({ _ in
+                NSAnimationContext.current().duration = 1
+                
+                labelPassOff.removeFromSuperview()
+                labelPassOffInitializing.removeFromSuperview()
+                labelPassOffInitied.removeFromSuperview()
+                wrongPassWarningView.animator().alphaValue = 0.0
+                wrongPassWarningImage.animator().alphaValue = 0.0
+                
+            }, completionHandler:{
+                wrongPassWarningView.removeFromSuperview()
+                wrongPassWarningImage.removeFromSuperview()
+            })
         }
-        
-        
         
     }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+    func fillHackingCodes() {
+        self.backgroundCodes.setTextWithTypeAnimation(typedText: "var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man(); var : atomic.front.wave = gijotrix \nnblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK \nstring output = 'Matrix'\nthoughts exploding : thousand pieces\nstruct group_info init_groups = .usage = atomic_init(2)\ndude -> man();", characterInterval: 0.010)
     }
 }
 
@@ -189,6 +202,43 @@ extension NSTextField {
                 DispatchQueue.main.asyncAfter(deadline: .now() + characterDelay * Double(index)) {
                     self.stringValue.append(character)
                 }
+            }
+        }
+    }
+    
+    func setLabelWithTypeAnimation(typedText: String, characterInterval: TimeInterval = 0.25) {
+        
+        DispatchQueue.global(qos: .userInteractive).async {
+            for character in typedText.characters {
+                DispatchQueue.main.async {
+                    self.stringValue = self.stringValue + String(character)
+                }
+                Thread.sleep(forTimeInterval: characterInterval)
+            }
+        }
+    }
+}
+
+extension NSTextView {
+    
+    func setTextWithTypeAnimation(typedText: String, characterInterval: TimeInterval = 0.25) {
+        
+        self.alphaValue        = 0.2
+        self.string            = ""
+        self.isEditable        = false
+        self.drawsBackground   = false
+        self.isSelectable      = false
+        self.font              = NSFont(name: "Press Start 2P", size: 9)
+        self.textColor         = NSColor.white
+        string = ""
+        
+        DispatchQueue.global(qos: .userInteractive).async {
+            for character in typedText.characters {
+                DispatchQueue.main.async {
+                    self.scrollToEndOfDocument(nil)
+                    self.string = self.string! + String(character)
+                }
+                Thread.sleep(forTimeInterval: characterInterval)
             }
         }
     }
