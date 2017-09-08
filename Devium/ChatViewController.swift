@@ -15,11 +15,12 @@ class ChatViewController: NSViewController {
         
         screenLoading()
         windowSizeOnScreen()
+        print("i got it")
  
     }
     
     func windowSizeOnScreen() {
-        self.view.frame = CGRect(x: 0, y: 0, width: (NSScreen.main()?.frame.width)! / 1.7, height: (NSScreen.main()?.frame.height)! / 1.15)
+//        self.view.frame = CGRect(x: 0, y: 0, width: (NSScrxeen.main()?.frame.width)! / 1.7, height: (NSScreen.main()?.frame.height)! / 1.15)
     }
     
     func screenLoading() {

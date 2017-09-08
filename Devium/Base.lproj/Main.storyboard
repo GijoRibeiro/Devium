@@ -666,6 +666,7 @@
             <objects>
                 <windowController id="B8D-0N-5wS" customClass="WindowViewController" customModule="Devium" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" identifier="ChatWindow" title="Devium" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA" customClass="CustomWindow" customModule="Devium" customModuleProvider="target">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="573" y="393" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -683,23 +684,23 @@
             <objects>
                 <viewController title="Devium - Stroga Group" storyboardIdentifier="ChatViewController" id="X8e-ep-Egz" customClass="ChatViewController" customModule="Devium" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="yHU-vY-htN">
-                        <rect key="frame" x="0.0" y="0.0" width="970" height="650"/>
+                        <rect key="frame" x="0.0" y="0.0" width="39" height="18"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="nR5-Kp-xxE">
-                                <rect key="frame" x="0.0" y="0.0" width="220" height="650"/>
+                                <rect key="frame" x="0.0" y="0.0" width="220" height="18"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <view key="contentView" ambiguous="YES" id="5G5-NJ-EBD">
-                                    <rect key="frame" x="0.0" y="0.0" width="220" height="650"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="220" height="18"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <color key="fillColor" red="0.24313725489999999" green="0.23137254900000001" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                             </box>
                             <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="BGA-jm-tbO">
-                                <rect key="frame" x="218" y="0.0" width="752" height="650"/>
+                                <rect key="frame" x="218" y="0.0" width="0.0" height="18"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <view key="contentView" ambiguous="YES" id="kjR-0R-tbC">
-                                    <rect key="frame" x="0.0" y="0.0" width="752" height="650"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="18"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <color key="fillColor" red="0.31372549019607843" green="0.30588235294117649" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
@@ -709,7 +710,7 @@
                 </viewController>
                 <customObject id="8Wv-rS-tsU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1389" y="845"/>
+            <point key="canvasLocation" x="923.5" y="529"/>
         </scene>
         <!--Devium-->
         <scene sceneID="hIz-AP-VOD">
@@ -896,6 +897,24 @@
                                             <color key="borderColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5e-Yu-GWS">
+                                            <rect key="frame" x="-2" y="224" width="269" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="YMf-bA-0c2">
+                                                <font key="font" size="17" name="PressStart2P"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Sx-Pn-j5x">
+                                            <rect key="frame" x="-2" y="196" width="269" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="N8g-Uq-HND">
+                                                <font key="font" size="12" name="PressStart2P"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                 </view>
                                 <color key="borderColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -908,9 +927,14 @@
                         <outlet property="backgroundCodes" destination="qIF-t3-oTM" id="TtS-Bf-rb3"/>
                         <outlet property="backgroundGradient" destination="4TN-7m-pMT" id="wR0-Dp-1FN"/>
                         <outlet property="codeSide" destination="LK0-AV-9MR" id="fR9-t5-LVh"/>
+                        <outlet property="deviumTitleLabel" destination="ZlM-VV-cZg" id="zSb-vP-qzK"/>
+                        <outlet property="justWaitLabel" destination="k5e-Yu-GWS" id="3xU-ZR-you"/>
+                        <outlet property="loadingLabel" destination="8Sx-Pn-j5x" id="DHX-T4-P1l"/>
                         <outlet property="loginAction" destination="21T-KD-MpI" id="Dpc-Fh-lHA"/>
+                        <outlet property="loginSide" destination="Vtg-UG-5Xn" id="gfW-99-E9f"/>
                         <outlet property="text" destination="qIF-t3-oTM" id="gsd-mp-6e7"/>
                         <outlet property="usernameField" destination="2k2-p0-3og" id="9m3-ed-dGs"/>
+                        <outlet property="welcomeToLabel" destination="L75-ff-Ddj" id="Orp-ss-KWd"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

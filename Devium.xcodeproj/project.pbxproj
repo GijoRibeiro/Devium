@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		248CB2E71F6210EB00C477A0 /* justwait.gif in Resources */ = {isa = PBXBuildFile; fileRef = 248CB2E61F6210EB00C477A0 /* justwait.gif */; };
 		249DC6291F5EE12400986B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249DC6281F5EE12400986B98 /* AppDelegate.swift */; };
 		249DC62B1F5EE12400986B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249DC62A1F5EE12400986B98 /* ViewController.swift */; };
 		249DC62D1F5EE12400986B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249DC62C1F5EE12400986B98 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		248CB2E61F6210EB00C477A0 /* justwait.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = justwait.gif; sourceTree = "<group>"; };
 		249DC6251F5EE12400986B98 /* Devium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		249DC6281F5EE12400986B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		249DC62A1F5EE12400986B98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		24EC6B241F5F6B2500BB8C18 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				248CB2E61F6210EB00C477A0 /* justwait.gif */,
 				24EC6B361F5F7B4000BB8C18 /* passoff.gif */,
 				249DC6601F5EEE8600986B98 /* finalBG.gif */,
 			);
@@ -313,6 +316,7 @@
 				24EC6B2B1F5F6C3A00BB8C18 /* 8-BIT WONDER.TTF in Resources */,
 				24EC6B2C1F5F6C3A00BB8C18 /* V5Xtende.ttf in Resources */,
 				24EC6B281F5F6C0100BB8C18 /* PressStart2P.ttf in Resources */,
+				248CB2E71F6210EB00C477A0 /* justwait.gif in Resources */,
 				249DC6611F5EEE8600986B98 /* finalBG.gif in Resources */,
 				24EC6B371F5F7B4000BB8C18 /* passoff.gif in Resources */,
 				249DC62D1F5EE12400986B98 /* Assets.xcassets in Resources */,

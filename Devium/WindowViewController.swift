@@ -13,10 +13,6 @@ class WindowViewController: NSWindowController {
     override func windowDidLoad() {
         super.windowDidLoad()
         
-        window?.isMovableByWindowBackground = true
-        window?.isOpaque = false
-        window?.backgroundColor = NSColor.clear
-        window?.becomeKey()
     }
     
     
